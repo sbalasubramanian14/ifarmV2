@@ -1,0 +1,23 @@
+steps:
+
+creating a php application.
+
+1. Use a previously initialized php app.
+2. Go to root folder in cmd.exe
+3. git init.
+4. composer update.
+5. git add .
+6. git add composer.json composer.lock
+7. git commit -m mesg
+8. heroku create appname
+9. git push heroku master
+10.heroku open
+
+
+creating a database instance.
+1. heroku addons:create heroku-postgresql:hobby-dev
+2.  heroku pg:credentials DATABASE_URL
+3. heroku pg:reset DATABASE_URL
+4. cat sampledb.sql | heroku pg:psql DATABASE_URL
+
+ "dbname=d23ups0uc5dc42 host=ec2-50-19-89-124.compute-1.amazonaws.com port=5432 user=kfmqxaafbisgcl password=7edbfc4525dae0ba476ddf772316bf6886fce53053e2d5a7e854ca7500fea67e sslmode=require"
